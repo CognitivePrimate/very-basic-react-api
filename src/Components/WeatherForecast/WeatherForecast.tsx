@@ -6,6 +6,12 @@ import "./WeatherForecast.css";
 // import api
 import {fetchWeatherPeriods} from "../../Services/WeatherServices";
 
+// MATERIAL UI
+import Button from "@material-ui/core/Button";
+
+
+// MATERIAL UI
+
 
 const WeatherForecast = () => {
     const [weatherList, setWeather] = useState<any[]>([]);
@@ -33,6 +39,7 @@ const WeatherForecast = () => {
                     <div className="imageBox">
                         <img src={period.icon} alt="weather-icon"/>
                     </div>
+                    <Button variant="contained" color="primary">Detailed Forecast</Button>
                     <div className="longForecastContainer">
                         <p className="longForecast">{period.detailedForecast}</p>
                     </div>
